@@ -19,6 +19,7 @@ public final class LoginFeatureDeepLinkHandler: DeepLinkHandler {
     public func viewController(for link: DeepLink) -> UIViewController? {
         switch link.path {
         case "/login":
+            Log.context()
             return LoginViewController(viewModel: LoginViewModel())
         default:
             return nil
