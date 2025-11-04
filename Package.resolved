@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-core-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/minhtien1403/ios-core-package",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2d78f16c75fc2ed6df82a9351f516b00d3953014"
+      }
+    },
+    {
+      "identity" : "ios-shared-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/minhtien1403/ios-shared-package",
+      "state" : {
+        "branch" : "master",
+        "revision" : "202b80cec6569894e38200813c1bdef0ff644c7b"
+      }
+    }
+  ],
+  "version" : 2
+}
