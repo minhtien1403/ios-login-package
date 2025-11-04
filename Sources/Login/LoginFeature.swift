@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 import Shared
 
 public final class LoginFeature: LoginFeatureInterface {
