@@ -11,6 +11,8 @@ import Shared
 
 public final class LoginFeature: LoginFeatureInterface {
     
+    weak var output: LoginFeatureOutput?
+    
     public init() {}
     
     public func makeLoginViewController() -> UIViewController {

@@ -14,6 +14,7 @@ final class LoginViewController: BaseViewController<LoginViewModelType> {
     private let loginButton = UIButton(type: .system)
     private let usernameField = UITextField()
     private let passwordField = UITextField()
+    weak var output: LoginFeatureOutput?
     
     override func setupView() {
         title = "Login"
@@ -55,6 +56,17 @@ final class LoginViewController: BaseViewController<LoginViewModelType> {
         viewModel.output.isLoginEnablePublisher
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: loginButton)
+            .store(in: &cancellables)
+        viewModel.output.loginResultPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] result in
+                switch result {
+                case .success:
+                    self?.output?.didLoginSuccess()
+                case .failure:
+                    break
+                }
+            }
             .store(in: &cancellables)
     }
 }
