@@ -7,6 +7,7 @@
 
 import UIKit
 import Core
+import Shared
 import Combine
 
 final class LoginViewController: BaseViewController<LoginViewModelType> {
@@ -66,6 +67,12 @@ final class LoginViewController: BaseViewController<LoginViewModelType> {
                 case .failure:
                     break
                 }
+            }
+            .store(in: &cancellables)
+        loginButton.tapPublisher
+            .receive(on: RunLoop.main)
+            .sink { [unowned self] _ in
+                viewModel.input.login()
             }
             .store(in: &cancellables)
     }

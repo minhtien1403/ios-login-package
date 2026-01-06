@@ -15,7 +15,25 @@
       "location" : "https://github.com/minhtien1403/ios-shared-package",
       "state" : {
         "branch" : "master",
-        "revision" : "908a6ae180fe7f66c23813c5fabf74ce5b24a457"
+        "revision" : "08d4539d5c8bba4cdab54b04687b3794bf3415ad"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "2ef543ee21d63734e1c004ad6c870255e8716c50",
+        "version" : "7.12.0"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     }
   ],
