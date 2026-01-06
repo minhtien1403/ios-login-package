@@ -16,7 +16,9 @@ public final class LoginFeature: LoginFeatureInterface {
     public init() {}
     
     public func makeLoginViewController() -> UIViewController {
-        return LoginViewController(viewModel: LoginViewModel())
+        let vc = LoginViewController(viewModel: LoginViewModel())
+        vc.output = output
+        return vc
     }
 
     public func makeRegisterViewController() -> UIViewController {
