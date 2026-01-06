@@ -11,7 +11,7 @@ import Shared
 
 public final class LoginFeature: LoginFeatureInterface {
     
-    weak var output: LoginFeatureOutput?
+    public weak var output: LoginFeatureOutput?
     
     public init() {}
     
