@@ -25,3 +25,22 @@ public final class LoginFeature: LoginFeatureInterface {
         return UIViewController()
     }
 }
+
+extension LoginFeature: DeepLinkHandler {
+    
+    public func canHandle(_ link: DeepLink) -> Bool {
+        link.path.hasPrefix("/login")
+    }
+    
+    public func viewController(for link: DeepLink) -> UIViewController? {
+        switch link.path {
+        case "/login":
+            Log.context()
+            let vc = LoginViewController(viewModel: LoginViewModel())
+            vc.output = output
+            return vc
+        default:
+            return nil
+        }
+    }
+}
